@@ -18,8 +18,6 @@ public class BlackJackGame {
 		}
 		Card card = this.deck.getDeck().get(this.deck.topOfDeck ++);
 		this.player.addToScore(card);
-		
-		
 
 		return card;
 	}

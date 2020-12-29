@@ -21,6 +21,7 @@ public class Main {
 		System.out.println("======================================================");
 		taskList.removeTask(task2);
 		System.out.println(taskList.toString());
+		
 	}
 
 }
