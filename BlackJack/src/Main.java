@@ -10,7 +10,7 @@ import javax.swing.SwingUtilities;
 
 public class Main {
 	public static void main(String[] args) {
-
+	
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				BlackJackGame game = new BlackJackGame("Jorra");
@@ -38,10 +38,13 @@ public class Main {
 							label.setText("Your Card: " + dealt.toString());
 							label2.setText("You've Won");
 							
+							return;
+							
 						} else if (game.getPlayerScore() > 21) {
 							label.setText("Your Card: " + dealt.toString());
 							label2.setText("Bust! You have gone over 21!");
-						
+							return;
+							
 						} else {
 							label.setText("Your Card: " + dealt.toString());
 							label2.setText("Current Player Score: " + game.getPlayerScore());
@@ -50,9 +53,7 @@ public class Main {
 				});
 			
 				frame.add(panel);
-
 				panel.setLayout(null);
-
 				frame.setVisible(true);
 			}
 		});
